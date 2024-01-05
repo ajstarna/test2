@@ -1,11 +1,23 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [project]
 name = "test2"
-authors = [{name = "Adam St Arnaud", email = "adam@gensyn.ai"}]
-dynamic = ["version", "description"]
+authors = [
+    {name = "Adam St Arnaud", email = "adam@gensyn.ai"},
+]
+version = "0.1.0"
+description = "dsfsdf"
+dependencies = [
+    "pytest>=7.4.4",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
 
 [project.urls]
 Home = "https://github.com/ajstarna/test2"
+
+[tool.pdm]
+package-type = "library"
